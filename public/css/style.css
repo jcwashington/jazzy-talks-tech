@@ -1,0 +1,11 @@
+:root {
+  --background: #FFFFED;
+  --light: #D2ABDB  ;
+  --lighter-dark: #584e6d;
+  --dark-purple: #59007f;
+  --text: #0a0612;
+}
+
+* {
+  box-sizing: border-box;
+}
