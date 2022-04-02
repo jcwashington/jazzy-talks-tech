@@ -5,18 +5,22 @@ const withAuth = require('../utils/auth');
 //if loggedIn go User's to dashboard, find all their posts and render the user-all-posts page
 router.get('/', withAuth, async (req, res) => {
     try {
-        const postsData = await Post.findAll({
-            where: { userId: req.session.userId },
-        });
-        // get all their post and make an array
-        const posts = postsData.map((post) => post.get({ plain: true }));
-        res.render('user-all-posts', {
-            layout: 'dashboard', posts
-        });
+      const postData = await Post.findAll({
+        where: {
+          userId: req.session.userId,
+        },
+      });
+  
+      const posts = postData.map((post) => post.get({ plain: true }));
+  
+      res.render('user-all-posts', {
+        layout: 'dashboard',
+        posts,
+      });
     } catch (err) {
-        res.redirect('login')
+      res.redirect('login');
     }
-});
+  });
 
 // creating new post
 router.get('/new', withAuth, (req, res) => {
