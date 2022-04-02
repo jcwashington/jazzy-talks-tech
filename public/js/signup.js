@@ -13,9 +13,6 @@ const signupFormHandler = async function(event) {
     headers: { 'Content-Type': 'application/json' },
   });
 
-  console.log(usernameEl.value);
-  console.log(passwordEl.value);
-
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {

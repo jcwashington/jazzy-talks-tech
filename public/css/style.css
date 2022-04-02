@@ -4,6 +4,7 @@
   --lighter-dark: #584e6d;
   --dark-purple: #59007f;
   --text: #0a0612;
+  --border-radius: 0.3rem;
 }
 
 * {
@@ -112,7 +113,7 @@ input {
 
 .hero {
   padding: 3% 4%;
-  /* background-image: url('../assets/gif-banner.gif'); */
+  background-image: url('../assets/gif-banner.gif');
   background-color: var(--dark-purple);
   color: var(--background);
 }
